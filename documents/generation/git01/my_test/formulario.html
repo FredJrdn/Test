@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>formulario</title>
+        <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="js/jquery.serializejson.js"></script>
+    </head>
+    <body>
+        <div>
+            <form id="myform" action="" method="post">
+                <p>Create an account</p>
+                <input type="name" name="name" placeholder="Name:" autofocus/> <br><br>
+                <input type="phone" name="phone" placeholder="Phone Number:" maxlength="10"/> <br><br>
+                <input type="email" name="email" placeholder="Email"/> <br><br>
+                <input type="password" name="password" placeholder="Password"/> <br><br>
+                <input type="checkbox" id="check"> Acepto que roben mi info. <br><br>
+                <button type="button" onclick="serializar()">Submit</button>
+            </form>
+        </div>
+        <script>
+            function serializar()
+            {
+                
+                var text="";
+                if($('#check').is(':checked')) {
+
+                    text=$('#myform').serializeJSON();
+                    if (text.name == "" || text.phone == "" || text.email == "" || text.password == "")
+                        {
+                        alert("Please, fill in the info.");
+                        }
+                    else
+                    {
+                    console.log(text);
+                    alert(text.name+"\n"+text.phone+"\n"+text.email+"\n"+text.password+"\n");
+                    }
+                }
+                else
+                {
+                    alert("Acept terms");
+                }
+            }
+        </script>
+    </body>
+</html>
