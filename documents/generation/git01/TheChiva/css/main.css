@@ -1,0 +1,9 @@
+body {
+    background-color: black;
+    color: white;
+}
+
+.row {
+    border-color: white;
+    background: linear-gradient(black, black,black, darkgray);
+}
