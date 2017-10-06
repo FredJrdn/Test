@@ -5,5 +5,12 @@ body {
 
 .row {
     border-color: white;
-    background: linear-gradient(black, black,black, darkgray);
+    background: linear-gradient(to bottom right, black, black, black, darkslategrey, darkgray);
+    padding: 7px 7px 7px 0;
+    border-bottom: 8px solid darkgreen;
+    border-radius: 25px;
+}
+
+.col-2 img {
+    border-radius: 25px;
 }
